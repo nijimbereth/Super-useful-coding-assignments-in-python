@@ -1,5 +1,4 @@
-#creating a function that applies an action to all elements of a list
-#using filter() method
+#important exercise for printing a selected set of elements
 
 students = [
     {"name": "Enock", "house": "Edewecht"},
@@ -13,5 +12,6 @@ students = [
 
 Oldenburgs = [student["name"] for student in students if student["house"] == "Oldenburg"]
 
+print("Students living in Oldenburg are:")
 for oldenburg in sorted(Oldenburgs, reverse=False):
     print(oldenburg)
