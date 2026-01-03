@@ -12,7 +12,11 @@ students = [
 def is_in_Oldenburg(n):
     return n["house"] == "Oldenburg"
 
-Oldenburgs = filter(is_in_Oldenburg, students)
+def main():
+    Oldenburgs = filter(is_in_Oldenburg, students)
+    
+    for oldenburg in sorted(Oldenburgs, key=lambda s: s["name"], reverse=False):
+        print(f'{oldenburg["name"]} lives in {oldenburg["house"]}')
 
-for oldenburg in sorted(Oldenburgs, key=lambda s: s["name"], reverse=False):
-    print(f'{oldenburg["name"]} lives in {oldenburg["house"]}')
+if __name__=="__main__":
+    main()
